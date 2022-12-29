@@ -39,7 +39,7 @@ fun <T> Collection<T>.joinToString(
 
 data class Person8(val firstName: String, val lastName: String, val phoneNumber: String?)
 class ContactListFilter {
-    var prefix: String = "",
+    var prefix: String  = ""
     var onlyWithPhoneNumber: Boolean = false
 
     //lambada as a function returns
@@ -58,7 +58,7 @@ enum class OS {
     windows
 }
 
-data class SiteVisit(val path, val duration: Double, val os: OS)
+data class SiteVisit(val path:String, val duration: Double, val os: OS)
 
 fun List<SiteVisit>.averageDuration(predicate: (SiteVisit) -> Boolean) =
     filter(predicate).map(SiteVisit::duration).average()
